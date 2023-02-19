@@ -5,6 +5,8 @@
             attr: 'pip.png',
             name: 'маша',
             surname: 'фиалкова',
+            var1: 5,
+            var2: 2,
         }
     }
 }
@@ -14,5 +16,6 @@
         <img v-bind:src="attr">
 		<p>{{ name }}</p>
     	<p>{{ surname }}</p>
+        {{ (var1**2) + var2 }}
 	</div>
 </template>
