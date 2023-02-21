@@ -9,12 +9,18 @@
             var2: 2,
             arr2: [9, 10, 20],
             obj: { a: 3, b: 8, c: 9 },
-
+        }
+    },
+    methods: {
+        show: function () {
+            alert(today);
         }
     }
 }
+let today = new Date();
 </script>
 <template>
+     {{ show() }}
 	<div>
         <img v-bind:src="attr">
 		<p>{{ name }}</p>
