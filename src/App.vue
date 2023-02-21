@@ -7,20 +7,27 @@
             surname: 'фиалкова',
             var1: 5,
             var2: 2,
+            num1: 12,
+            num2: 23,
             arr2: [9, 10, 20],
             obj: { a: 3, b: 8, c: 9 },
         }
     },
-   methods: {
+methods: {
         show: function () {
             alert(today);
+        },
+        summ: function () {
+            alert(this.num1 + this.num2)
         }
     }
 }
-let today = new Date();
+let today = new Date(); 
 </script>
+
 <template>
-	<div>
+    {{ summ() }}
+    <div>
         <img v-bind:src="attr">
 		<p>{{ name }}</p>
     	<p>{{ surname }}</p>
