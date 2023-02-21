@@ -11,22 +11,30 @@
             num2: 23,
             arr2: [9, 10, 20],
             obj: { a: 3, b: 8, c: 9 },
+            date: '4',
         }
     },
-methods: {
+    methods: {
         show: function () {
             alert(today);
         },
         summ: function () {
             alert(this.num1 + this.num2)
-        }
+        },
+        data: function () {
+            let date = this.dayOfWeek(this.date);
+            alert(date);
+        },
+        dayOfWeek: function (date) {
+            let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+            return days[date - 1];
+        },
     }
 }
 let today = new Date(); 
 </script>
 
 <template>
-    {{ summ() }}
     <div>
         <img v-bind:src="attr">
 		<p>{{ name }}</p>
@@ -34,7 +42,8 @@ let today = new Date();
         {{ (var1**2) + var2 }}
         <br>{{ arr2[0] + arr2[1] + arr2[2] }}
     	<br>{{ obj.a + obj.b + obj.c }}
-        <br><button class="button button1" @click="show">Узнать дату(нажатие)</button> <br> 
-        <br><button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
+        <br><button class="button button1" @click="show">Узнать дату(нажатие)</button>
+        <br><button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button>
+        <br><button class="button button3" @click="date">Узнать день недели по числу({{ date }})</button> 
 	</div>
 </template>
