@@ -11,7 +11,7 @@
             obj: { a: 3, b: 8, c: 9 },
         }
     },
-    methods: {
+   methods: {
         show: function () {
             alert(today);
         }
@@ -20,7 +20,6 @@
 let today = new Date();
 </script>
 <template>
-     {{ show() }}
 	<div>
         <img v-bind:src="attr">
 		<p>{{ name }}</p>
@@ -28,5 +27,7 @@ let today = new Date();
         {{ (var1**2) + var2 }}
         <br>{{ arr2[0] + arr2[1] + arr2[2] }}
     	<br>{{ obj.a + obj.b + obj.c }}
+        <br><button class="button button1" @click="show">Узнать дату(нажатие)</button> <br> 
+        <br><button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
 	</div>
 </template>
